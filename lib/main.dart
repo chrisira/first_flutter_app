@@ -13,7 +13,10 @@ void main() {
             ], begin: Alignment.topLeft, end: Alignment.bottomRight),
           ),
           child: const Center(
-            child: Text("Hello Chris"),
+            child: Text(
+              "Hello Chris",
+              style: TextStyle(fontSize: 28, color: Colors.white),
+            ),
           ),
         ),
       ),
