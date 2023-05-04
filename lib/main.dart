@@ -5,21 +5,30 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 161, 35, 35),
-              Color.fromARGB(255, 194, 53, 53),
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-          ),
-          child: const Center(
-            child: Text(
-              "Hello Chris",
-              style: TextStyle(fontSize: 28, color: Colors.white),
-            ),
-          ),
-        ),
+        body: GradientContainer(),
       ),
     ),
   );
+}
+
+//adding a class to wrap some elements together as one widget
+
+class GradientContainer extends StatelessWidget {
+  @override
+  build(context) {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [
+          Color.fromARGB(255, 161, 35, 35),
+          Color.fromARGB(255, 194, 53, 53),
+        ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+      ),
+      child: const Center(
+        child: Text(
+          "Hello Chris",
+          style: TextStyle(fontSize: 28, color: Colors.white),
+        ),
+      ),
+    );
+  }
 }
