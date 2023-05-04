@@ -10,7 +10,7 @@ void main() {
             gradient: LinearGradient(colors: [
               Color.fromARGB(255, 161, 35, 35),
               Color.fromARGB(255, 194, 53, 53),
-            ]),
+            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
           ),
           child: const Center(
             child: Text("Hello Chris"),
